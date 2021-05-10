@@ -22,6 +22,7 @@ export VAULT_TOKEN=00000000-0000-0000-0000-000000000000
 vault kv put secret/myapp dbusername='freedbtech_garashisnew' dbpassword='gaurav1@'
 
 eval $(minikube docker-env)
+
 mvn clean package -Dmaven.test.skip=true
 
 docker build -t myspringproject:latest .
