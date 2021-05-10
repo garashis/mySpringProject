@@ -9,8 +9,6 @@ vault kv get myapp/db
 
 https://vault-cluster.vault.8e15668b-ba4d-4ace-972d-e4e7f75fa1e3.aws.hashicorp.cloud:8200/v1/myapp/db
 
-
-
 ### setup value on local https://gitorko.github.io/2020/08/06/Spring-Cloud-Vault/
 brew install vault
 
@@ -44,8 +42,8 @@ kubectl describe po myspringproject-5d665b6556-v6wcl
 
 kubectl expose deployment myspringproject --type=LoadBalancer --port 8080
 
-Getting the service URL when using Minikube
+#### Getting the service URL when using Minikube
 minikube service myspringproject --url
 
-This will give url. Put the url in browser.
+#### This will give url. Put the url in browser.
 http://127.0.0.1:62663/authors
