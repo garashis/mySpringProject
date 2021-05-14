@@ -6,7 +6,8 @@ spring:
     # Configuration for a vault server running in dev mode
     vault:
       scheme: http
-      host: host.docker.internal
+#      host: host.docker.internal
+      host: localhost
       port: 8200
       connection-timeout: 5000
       read-timeout: 15000

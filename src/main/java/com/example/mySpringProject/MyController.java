@@ -12,14 +12,22 @@ import java.util.List;
 public class MyController {
 
     //After Spring 4.3 If your class has only single constructor then there is no need to put @Autowired
-    private AuthorsRepository authorsRepository;
+    private final AuthorsRepository authorsRepository;
 
-    public MyController(AuthorsRepository authorsRepository){
+    private final MyService service;
+
+    public MyController(AuthorsRepository authorsRepository, MyService service){
         this.authorsRepository= authorsRepository;
+        this.service = service;
     }
 
     @GetMapping("/authors")
     public List<Authors> getAllNotes() {
         return authorsRepository.findAll();
+    }
+
+    @GetMapping("/users")
+    public String getUsers() {
+        return service.getUsers();
     }
 }
